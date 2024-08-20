@@ -1,15 +1,12 @@
-import "@/styles/globals.css";
 import "@/styles/normalize.css";
-import {Inter} from "next/font/google";
 
 import type {AppProps} from "next/app";
-
-const inter = Inter({subsets: ["latin"]});
+import {DashboardLayout} from "@/layouts";
 
 export default function App({Component, pageProps}: AppProps) {
   return (
-    <main className={inter.className}>
+    <DashboardLayout>
       <Component {...pageProps} />
-    </main>
+    </DashboardLayout>
   );
 }
