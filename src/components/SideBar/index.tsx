@@ -1,7 +1,7 @@
 import styles from './SideBar.module.scss'
 import type {SideBarProps} from "./SideBar.types";
 import Image from "next/image";
-import {Menu} from "@/components";
+import {Menu, Profile} from "@/components";
 
 const SideBar = ({showMobileMenu, setShowMobileMenu}: SideBarProps) => {
   return (
@@ -19,6 +19,8 @@ const SideBar = ({showMobileMenu, setShowMobileMenu}: SideBarProps) => {
       </div>
 
       <Menu />
+
+      <Profile />
     </aside>
   );
 }
