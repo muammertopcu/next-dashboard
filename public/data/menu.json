@@ -5,25 +5,25 @@
       {
         "name": "Reports",
         "icon": "reports.svg",
-        "link": "/dashboard",
+        "link": "/dashboard/reports",
         "active": true
       },
       {
         "name": "Library",
         "icon": "library.svg",
-        "link": "/library",
+        "link": "/dashboard/library",
         "active": false
       },
       {
         "name": "People",
         "icon": "people.svg",
-        "link": "/people",
+        "link": "/dashboard/people",
         "active": false
       },
       {
         "name": "Activities",
         "icon": "activities.svg",
-        "link": "/activities",
+        "link": "/dashboard/activities",
         "active": false
       }
     ]
@@ -34,13 +34,13 @@
       {
         "name": "Get Started",
         "icon": "get-started.svg",
-        "link": "/get-started",
+        "link": "/support/get-started",
         "active": false
       },
       {
         "name": "Settings",
         "icon": "settings.svg",
-        "link": "/settings",
+        "link": "/support/settings",
         "active": false
       }
     ]

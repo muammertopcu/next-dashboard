@@ -1,7 +1,10 @@
 import styles from './Header.module.scss'
 import type {HeaderProps} from "./Header.types";
+import {usePathname} from "next/navigation";
 
 const Header = ({toggleMobileMenu}: HeaderProps) => {
+  const pathname = usePathname();
+
   return (
     <header className={styles.header}>
       <p className={styles.header__mobile_menu_toggle} onClick={toggleMobileMenu}>
@@ -9,7 +12,7 @@ const Header = ({toggleMobileMenu}: HeaderProps) => {
       </p>
 
       <p className={styles.header__title}>
-        Header
+        {pathname.split('/').pop()?.replace('-', ' ')}
       </p>
     </header>
   )
