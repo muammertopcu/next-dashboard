@@ -1,0 +1,17 @@
+.main {
+  margin: 30px;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  height: calc(100vh - 60px);
+  gap: 34px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  position: relative;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+}

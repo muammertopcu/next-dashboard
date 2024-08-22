@@ -1,0 +1,52 @@
+.sidebar {
+  width: 246px;
+  display: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+  background-color: #fff;
+
+  border-radius: 20px;
+  border: inset #EFF0F6;
+  border-width: 0 1px 0 0;
+  overflow: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &.active {
+    display: block;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    position: initial;
+    margin: 0;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__logo {
+      margin: 43px 0 43px 35px;
+    }
+
+    &__close {
+      margin-right: 10px;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+
+      @media screen and (min-width: 768px) {
+        display: none;
+      }
+    }
+  }
+}
