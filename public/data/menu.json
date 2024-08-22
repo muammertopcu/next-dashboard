@@ -1,0 +1,48 @@
+[
+  {
+    "section": "",
+    "items": [
+      {
+        "name": "Reports",
+        "icon": "reports.svg",
+        "link": "/dashboard",
+        "active": true
+      },
+      {
+        "name": "Library",
+        "icon": "library.svg",
+        "link": "/library",
+        "active": false
+      },
+      {
+        "name": "People",
+        "icon": "people.svg",
+        "link": "/people",
+        "active": false
+      },
+      {
+        "name": "Activities",
+        "icon": "activities.svg",
+        "link": "/activities",
+        "active": false
+      }
+    ]
+  },
+  {
+    "section": "Support",
+    "items": [
+      {
+        "name": "Get Started",
+        "icon": "get-started.svg",
+        "link": "/get-started",
+        "active": false
+      },
+      {
+        "name": "Settings",
+        "icon": "settings.svg",
+        "link": "/settings",
+        "active": false
+      }
+    ]
+  }
+]

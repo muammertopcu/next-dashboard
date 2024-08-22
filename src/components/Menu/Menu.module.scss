@@ -1,0 +1,18 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+
+    &__title {
+      font-size: 16px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, .5);
+      margin: 0 27px;
+    }
+  }
+}

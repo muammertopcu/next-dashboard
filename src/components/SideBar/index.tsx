@@ -1,6 +1,7 @@
 import styles from './SideBar.module.scss'
 import type {SideBarProps} from "./SideBar.types";
 import Image from "next/image";
+import {Menu} from "@/components";
 
 const SideBar = ({showMobileMenu, setShowMobileMenu}: SideBarProps) => {
   return (
@@ -17,13 +18,7 @@ const SideBar = ({showMobileMenu, setShowMobileMenu}: SideBarProps) => {
         />
       </div>
 
-      <nav className={styles.sidebar__nav}>
-        {
-          Array.from({length: 10}).map((_, index) => (
-            <div key={index}>SideBar {index}</div>
-          ))
-        }
-      </nav>
+      <Menu />
     </aside>
   );
 }

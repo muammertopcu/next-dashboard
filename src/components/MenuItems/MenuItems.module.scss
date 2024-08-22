@@ -1,0 +1,38 @@
+.menu_items {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 27px;
+
+  &__item {
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 11px;
+    gap: 15px;
+
+    height: 46px;
+
+    border-radius: 10px;
+
+    &:hover {
+      background-color: rgba(#1B59F8, .05);
+      transition: background-color .5s;
+    }
+
+    &.active {
+      background-color: rgba(#1B59F8, .1);
+
+
+      .menu_items__item__icon {
+        filter: grayscale(0);
+      }
+    }
+
+    &__icon {
+      filter: grayscale(100%);
+    }
+  }
+}
