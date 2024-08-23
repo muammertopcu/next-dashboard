@@ -1,0 +1,93 @@
+.dropdown {
+  position: relative;
+  display: flex;
+  flex: 1;
+
+  &__toggle {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 14px;
+
+    background-color: white;
+    border: 1px solid #EFF0F6;
+    border-radius: 20px;
+
+    padding: 10px 15px;
+
+    cursor: pointer;
+
+    &__arrow {
+      float: right;
+      transition: transform 0.2s;
+    }
+
+    &__open {
+      transform: rotate(180deg);
+    }
+
+    &__label {
+      font-size: 16px;
+      font-weight: 500;
+      color: rgba(#000, 0.7);
+    }
+
+    &__value {
+      font-size: 16px;
+      font-weight: 500;
+      color: #000000;
+    }
+  }
+
+  &__open {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: none;
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    gap: 18px;
+    padding: 0 15px 15px 10px;
+
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    background-color: white;
+    border: 1px solid #EFF0F6;
+    border-top: none;
+
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+
+    z-index: 1000;
+
+    &__separator {
+      width: 100%;
+      height: 1px;
+
+      align-self: center;
+
+      background-color: rgba(#000000, 0.1);
+    }
+
+    &__item {
+      padding: 10px 15px;
+      font-size: 14px;
+      cursor: pointer;
+
+      border-radius: 11px;
+
+      &.selected {
+        background-color: #F2F7FF;
+      }
+    }
+  }
+}
