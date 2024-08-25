@@ -1,6 +1,6 @@
 'use client';
 
-import {Dropdown, SmallGraph} from "@/components";
+import {ActivityChart, Dropdown, SmallGraph} from "@/components";
 import styles from './Reports.module.scss';
 import {useEffect, useState} from "react";
 
@@ -52,6 +52,10 @@ const Reports = () => {
               <SmallGraph data={data}/>
             </div>
           ))}
+        </div>
+
+        <div className={styles.reports__contents__activity_graph}>
+          <ActivityChart />
         </div>
       </div>
     </article>

@@ -7,3 +7,4 @@ export { default as Dropdown } from './Dropdown';
 export { default as ShadowBox } from './ShadowBox';
 export { default as SmallGraph } from './SmallGraph';
 export { default as Tooltip } from './Tooltip';
+export { default as ActivityChart } from './ActivityChart';

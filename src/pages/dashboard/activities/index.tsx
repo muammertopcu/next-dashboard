@@ -1,5 +1,7 @@
+import {ActivityChart} from "@/components";
+
 const Activities = () => {
-  return null;
+  return <ActivityChart />
 }
 
 export default Activities;
