@@ -8,3 +8,7 @@ export { default as ShadowBox } from './ShadowBox';
 export { default as SmallGraph } from './SmallGraph';
 export { default as Tooltip } from './Tooltip';
 export { default as ActivityChart } from './ActivityChart';
+export { default as Topics } from './Topics';
+export { default as ProgressBar } from './ProgressBar';
+export { default as WeakestTopics } from './WeakestTopics';
+export { default as StrongestTopics } from './StrongestTopics';

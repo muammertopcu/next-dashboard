@@ -1,6 +1,6 @@
 'use client';
 
-import {ActivityChart, Dropdown, SmallGraph} from "@/components";
+import {ActivityChart, Dropdown, SmallGraph, StrongestTopics, WeakestTopics} from "@/components";
 import styles from './Reports.module.scss';
 import {useEffect, useState} from "react";
 
@@ -55,7 +55,15 @@ const Reports = () => {
         </div>
 
         <div className={styles.reports__contents__activity_graph}>
-          <ActivityChart />
+          <ActivityChart/>
+        </div>
+
+        <div className={styles.reports__contents__weakest_topics}>
+          <WeakestTopics/>
+        </div>
+
+        <div className={styles.reports__contents__weakest_topics}>
+          <StrongestTopics/>
         </div>
       </div>
     </article>

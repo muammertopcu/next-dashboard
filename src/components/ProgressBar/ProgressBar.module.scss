@@ -1,0 +1,35 @@
+$green: #7FDD53;
+$green-light: #2FEA9B;
+$pink: #FF4080;
+$yellow-light: #FFBF1A;
+
+@mixin gradient-background($start-color, $end-color) {
+  background: linear-gradient(143.13deg, $start-color 5.36%, $end-color 94.64%);
+}
+
+.progress {
+  width: 100%;
+  height: 10px;
+  border-radius: 10px;
+
+  &.default {
+    @include gradient-background(rgba($yellow-light, 0.2), rgba($pink, 0.2));
+  }
+
+  &.green {
+    @include gradient-background(rgba($green, 0.2), rgba($green-light, 0.2));
+  }
+
+  &__bar {
+    height: 100%;
+    border-radius: 10px;
+
+    &.default {
+      @include gradient-background($yellow-light, $pink);
+    }
+
+    &.green {
+      @include gradient-background($green, $green-light);
+    }
+  }
+}
