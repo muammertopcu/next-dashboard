@@ -14,3 +14,4 @@ export { default as WeakestTopics } from './WeakestTopics';
 export { default as StrongestTopics } from './StrongestTopics';
 export { default as LeaderBoard } from './LeaderBoard';
 export { default as UserLeaderBoard } from './UserLeaderBoard';
+export { default as GroupsLeaderBoard } from './GroupsLeaderBoard';

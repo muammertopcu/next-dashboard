@@ -1,4 +1,4 @@
-.leader_board {
+.leaderboard {
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -10,5 +10,69 @@
 
     font-size: 14px;
     font-weight: 500;
+  }
+
+  &__content {
+    &__item {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      justify-content: space-between;
+
+      height: 66px;
+
+      &__image {
+        width: 42px;
+        height: 42px;
+        border-radius: 21px;
+        overflow: hidden;
+      }
+
+      &__details {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        gap: 4px;
+
+        &__name {
+          font-size: 14px;
+          font-weight: 600;
+        }
+
+        &__point {
+          font-size: 12px;
+          font-weight: 500;
+        }
+      }
+
+      &:nth-child(-n + 3) &__details &__details__point {
+        color: rgba(0, 0, 0, 0.5);
+      }
+
+      &__rank {
+        display: flex;
+        gap: 12px;
+
+        &__number {
+          font-size: 16px;
+          font-weight: 600;
+          letter-spacing: -0.2px;
+        }
+      }
+    }
+  }
+
+  &__footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 25px 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    color: #1B59F8;
   }
 }

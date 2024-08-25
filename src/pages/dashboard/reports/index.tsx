@@ -1,6 +1,14 @@
 'use client';
 
-import {ActivityChart, Dropdown, SmallGraph, StrongestTopics, UserLeaderBoard, WeakestTopics} from "@/components";
+import {
+  ActivityChart,
+  Dropdown,
+  GroupsLeaderBoard,
+  SmallGraph,
+  StrongestTopics,
+  UserLeaderBoard,
+  WeakestTopics
+} from "@/components";
 import styles from './Reports.module.scss';
 import {useEffect, useState} from "react";
 
@@ -13,35 +21,23 @@ const Reports = () => {
       .then(data => setSmallGraphData(data));
   }, []);
 
-  const handleTimeframeSelect = (option: string) => {
-    console.log('Selected timeframe:', option);
-  };
-
-  const handlePeopleSelect = (option: string) => {
-    console.log('Selected people:', option);
-  };
-
-  const handleTopicSelect = (option: string) => {
-    console.log('Selected topic:', option);
-  };
-
   return (
     <article className={styles.reports}>
       <div className={styles.reports___header}>
         <Dropdown
           label="Timeframe"
           options={['Last 7 Days', 'This Month', 'This Year', 'Custom']}
-          onSelect={handleTimeframeSelect}
+          onSelect={() => undefined}
         />
         <Dropdown
           label="People"
           options={['All Users', 'Managers', 'Trainers']}
-          onSelect={handlePeopleSelect}
+          onSelect={() => undefined}
         />
         <Dropdown
           label="Topic"
           options={['All', 'Food Safety', 'Covid Protocols']}
-          onSelect={handleTopicSelect}
+          onSelect={() => undefined}
         />
       </div>
 
@@ -71,7 +67,7 @@ const Reports = () => {
         </div>
 
         <div className={styles.reports__contents__weakest_topics}>
-          <UserLeaderBoard/>
+          <GroupsLeaderBoard/>
         </div>
       </div>
     </article>
