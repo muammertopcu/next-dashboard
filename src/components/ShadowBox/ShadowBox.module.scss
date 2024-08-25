@@ -1,0 +1,12 @@
+.shadow_box {
+  display: flex;
+  padding: 18px 0 18px 17px;
+  cursor: pointer;
+
+  background-color: white;
+
+  border: 1px solid #EFF0F6;
+  border-radius: 20px;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}

@@ -1,0 +1,48 @@
+.reports {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 20px;
+
+  overflow: hidden;
+
+  &___header {
+    display: flex;
+    gap: 10px;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
+
+  &__contents {
+    display: grid;
+    gap: 1rem;
+    grid-template-areas:
+        "a b"
+        "c d"
+        "e f";
+    grid-template-columns: 50% ;
+
+    &__small_graphs {
+      grid-area: a;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      &__item {
+        flex: 0 0 32%;
+        margin-bottom: 10px;
+
+        @media screen and (max-width: 1024px) {
+          flex: 0 0 100%;
+        }
+      }
+    }
+
+    &__activity_graph {
+      grid-area: b;
+    }
+  }
+}

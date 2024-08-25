@@ -4,3 +4,6 @@ export { default as Menu } from './Menu';
 export { default as MenuItems } from './MenuItems';
 export { default as Profile } from './Profile';
 export { default as Dropdown } from './Dropdown';
+export { default as ShadowBox } from './ShadowBox';
+export { default as SmallGraph } from './SmallGraph';
+export { default as Tooltip } from './Tooltip';

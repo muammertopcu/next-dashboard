@@ -1,0 +1,41 @@
+.small_graph {
+  height: 141px;
+
+  padding-bottom: 20px;
+
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+
+    margin-right: 17px;
+
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: -0.15px;
+
+    color: rgba(0, 0, 0, 0.7);
+
+
+  }
+
+  &__metric {
+    font-size: 24px;
+    font-weight: bold;
+
+    &__span {
+      opacity: .5;
+
+      font-size: 17px;
+      font-weight: 600;
+    }
+  }
+
+  &__chart {
+    margin-right: 17px;
+  }
+}

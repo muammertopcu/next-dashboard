@@ -1,0 +1,61 @@
+[
+  {
+    "label": "Active Users",
+    "value": "60",
+    "total": "100",
+    "data": []
+  },
+  {
+    "label": "Questions Answered",
+    "value": "3.298",
+    "data": []
+  },
+  {
+    "label": "Av. Session Length",
+    "value": "2m 34s",
+    "data": []
+  },
+  {
+    "label": "Starting Knowledge",
+    "value": "64%",
+    "tooltip": "The average starting knowledge of users",
+    "data": [
+      10,
+      20,
+      12,
+      15,
+      6,
+      14,
+      10,
+      8
+    ]
+  },
+  {
+    "label": "Current Knowledge",
+    "value": "86%",
+    "data": [
+      20,
+      30,
+      22,
+      25,
+      16,
+      24,
+      20,
+      18
+    ]
+  },
+  {
+    "label": "Knowledge Gain",
+    "value": "+34%",
+    "data": [
+      10,
+      15,
+      20,
+      12,
+      10,
+      8,
+      6,
+      4
+    ]
+  }
+]
