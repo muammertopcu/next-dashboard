@@ -1,0 +1,14 @@
+.leader_board {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  padding-right: 30px;
+
+  &__title {
+    opacity: .5;
+
+    font-size: 14px;
+    font-weight: 500;
+  }
+}

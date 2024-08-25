@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "points": 100,
+    "accuracy": 98,
+    "image": "https://i.pravatar.cc/42",
+    "rank": 1,
+    "rankChange": "up"
+  },
+  {
+    "id": 2,
+    "name": "Jane Doe",
+    "points": 90,
+    "accuracy": 95,
+    "image": "https://i.pravatar.cc/43",
+    "rank": 2,
+    "rankChange": "down"
+  },
+  {
+    "id": 3,
+    "name": "John Smith",
+    "points": 80,
+    "accuracy": 90,
+    "image": "https://i.pravatar.cc/44",
+    "rank": 3,
+    "rankChange": "up"
+  },
+  {
+    "id": 4,
+    "name": "Jane Smith",
+    "points": 70,
+    "accuracy": 85,
+    "image": "https://i.pravatar.cc/45",
+    "rank": 4,
+    "rankChange": "down"
+  },
+  {
+    "id": 5,
+    "name": "John Doe",
+    "points": 60,
+    "accuracy": 80,
+    "image": "https://i.pravatar.cc/46",
+    "rank": 5,
+    "rankChange": "up"
+  },
+  {
+    "id": 6,
+    "name": "Jane Doe",
+    "points": 50,
+    "accuracy": 75,
+    "image": "https://i.pravatar.cc/47",
+    "rank": 6,
+    "rankChange": "down"
+  },
+  {
+    "id": 7,
+    "name": "John Smith",
+    "points": 40,
+    "accuracy": 70,
+    "image": "https://i.pravatar.cc/48",
+    "rank": 7,
+    "rankChange": "up"
+  },
+  {
+    "id": 8,
+    "name": "Jane Smith",
+    "points": 30,
+    "accuracy": 65,
+    "image": "https://i.pravatar.cc/49",
+    "rank": 8,
+    "rankChange": "down"
+  },
+  {
+    "id": 9,
+    "name": "John Doe",
+    "points": 20,
+    "accuracy": 60,
+    "image": "https://i.pravatar.cc/50",
+    "rank": 9,
+    "rankChange": "up"
+  },
+  {
+    "id": 10,
+    "name": "Jane Doe",
+    "points": 10,
+    "accuracy": 55,
+    "image": "https://i.pravatar.cc/51",
+    "rank": 10,
+    "rankChange": "down"
+  }
+]

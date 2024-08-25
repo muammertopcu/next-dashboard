@@ -12,3 +12,5 @@ export { default as Topics } from './Topics';
 export { default as ProgressBar } from './ProgressBar';
 export { default as WeakestTopics } from './WeakestTopics';
 export { default as StrongestTopics } from './StrongestTopics';
+export { default as LeaderBoard } from './LeaderBoard';
+export { default as UserLeaderBoard } from './UserLeaderBoard';

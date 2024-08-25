@@ -24,6 +24,11 @@
         "e f";
     grid-template-columns: 50% ;
 
+    @media screen and (max-width: 1024px) {
+      display: flex;
+      flex-direction: column;
+    }
+
     &__small_graphs {
       grid-area: a;
       display: flex;
