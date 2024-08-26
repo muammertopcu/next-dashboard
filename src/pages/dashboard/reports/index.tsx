@@ -12,6 +12,18 @@ import {
 import styles from './Reports.module.scss';
 import {useEffect, useState} from "react";
 
+
+const data = [
+  {
+    label: 'Groups',
+    options: ['All Users  400', 'Managers  14', 'Trainers  4']
+  },
+  {
+    label: 'Users',
+    options: ['Adrian Lu', 'Evelyn Hamilton', 'Jenny Wilson']
+  }
+];
+
 const Reports = () => {
   const [smallGraphData, setSmallGraphData] = useState([]);
 
@@ -27,17 +39,18 @@ const Reports = () => {
         <Dropdown
           label="Timeframe"
           options={['Last 7 Days', 'This Month', 'This Year', 'Custom']}
-          onSelect={() => undefined}
+          onSelect={() => console.log('timeframe')}
         />
         <Dropdown
           label="People"
-          options={['All Users', 'Managers', 'Trainers']}
-          onSelect={() => undefined}
+          options={data}
+          onSelect={(options) => console.log('people', options)}
+          multiple
         />
         <Dropdown
           label="Topic"
           options={['All', 'Food Safety', 'Covid Protocols']}
-          onSelect={() => undefined}
+          onSelect={(options) => console.log('topic', options)}
         />
       </div>
 
