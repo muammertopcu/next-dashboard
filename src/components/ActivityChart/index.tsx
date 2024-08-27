@@ -3,17 +3,17 @@ import moment from "moment";
 import {ShadowBox} from "@/components";
 import {useEffect, useMemo, useState} from "react";
 import type {Activity} from "@/type";
-import {dummy} from "./ActivityChart.data";
+import {activityData} from "@/data";
 import styles from './ActivityChart.module.scss';
 
 const Chart = dynamic(() => import('react-apexcharts'), {ssr: false});
 
 const ActivityChart = () => {
   const [filter, setFilter] = useState<'month' | 'week' | 'day'>('month');
-  const [data, setData] = useState<Activity[]>(dummy.month);
+  const [data, setData] = useState<Activity[]>(activityData.month);
 
   useEffect(() => {
-    setData(dummy[filter]);
+    setData(activityData[filter]);
   }, [filter]);
 
   const labels = useMemo(() => {
@@ -32,7 +32,7 @@ const ActivityChart = () => {
               className={styles.activity_chart__header__selector__select}
               onChange={(e) => setFilter(e.target.value as 'month' | 'week' | 'day')}
             >
-              {Object.keys(dummy).map((key) => <option key={key} value={key}>{key}</option>)}
+              {Object.keys(activityData).map((key) => <option key={key} value={key}>{key}</option>)}
             </select>
           </span>
         </div>

@@ -11,7 +11,7 @@ import {
   WeakestTopics
 } from "@/components";
 import styles from './Reports.module.scss';
-import {peopleOptions, timeFrameOptions, topicOptions} from "./Reports.data";
+import {peopleOptions, timeFrameOptions, topicOptions} from "@/data";
 
 const Reports = () => {
   const [smallGraphData, setSmallGraphData] = useState([]);

@@ -22,7 +22,7 @@ const dayData: Activity[] = Array.from({length: 24}, (_, i) => ({
   value: Math.floor(Math.random() * 100),
 }));
 
-export const dummy = {
+export const activityData = {
   month: monthData,
   week: weekData,
   day: dayData,
