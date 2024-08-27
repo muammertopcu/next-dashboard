@@ -1,21 +1,26 @@
 import dynamic from 'next/dynamic'
 import moment from "moment";
 import {ShadowBox} from "@/components";
-import {useEffect, useState} from "react";
+import {useEffect, useMemo, useState} from "react";
 import type {Activity} from "@/type";
+import {dummy} from "./ActivityChart.data";
 import styles from './ActivityChart.module.scss';
-import Image from "next/image";
 
 const Chart = dynamic(() => import('react-apexcharts'), {ssr: false});
 
 const ActivityChart = () => {
-  const [data, setData] = useState<Activity[]>([]);
+  const [filter, setFilter] = useState<'month' | 'week' | 'day'>('month');
+  const [data, setData] = useState<Activity[]>(dummy.month);
 
   useEffect(() => {
-    fetch('/data/activity.json')
-      .then(response => response.json())
-      .then(data => setData(data));
-  }, []);
+    setData(dummy[filter]);
+  }, [filter]);
+
+  const labels = useMemo(() => {
+    const format = filter === 'day' ? 'HH:mm' : 'DD/MM';
+    return data.map((item) => moment(item.date).format(format));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [data]);
 
   return (
     <ShadowBox>
@@ -23,7 +28,12 @@ const ActivityChart = () => {
         <div className={styles.activity_chart__header}>
           <span className={styles.activity_chart__header__title}>Activity</span>
           <span className={styles.activity_chart__header__selector}>
-            Month <Image src={require('@/assets/arrow-down.svg')} alt={''} />
+            <select
+              className={styles.activity_chart__header__selector__select}
+              onChange={(e) => setFilter(e.target.value as 'month' | 'week' | 'day')}
+            >
+              {Object.keys(dummy).map((key) => <option key={key} value={key}>{key}</option>)}
+            </select>
           </span>
         </div>
 
@@ -33,18 +43,25 @@ const ActivityChart = () => {
           options={{
             chart: {toolbar: {show: false}},
             tooltip: {enabled: false},
-            fill: {colors: ['#1B59F8', '#1B59F8']},
+            fill: {colors: ['#1B59F8', '#1B59F800']},
             dataLabels: {enabled: false},
+            grid: {show: false},
+            stroke: {width: 0},
             plotOptions: {
               bar: {
+                borderRadius: 5,
+                borderRadiusApplication: 'around',
+                borderRadiusWhenStacked: 'all',
+                horizontal: false,
                 columnWidth: '10px',
                 colors: {
                   backgroundBarColors: ['#F2F7FF'],
                   backgroundBarOpacity: 0.5,
+                  backgroundBarRadius: 5,
                 },
               },
             },
-            xaxis: {categories: data.map((item) => moment(item.date).format('MMM'))},
+            xaxis: {categories: labels},
           }}
           series={[{data: data.map((item) => item.value)}]}
         />

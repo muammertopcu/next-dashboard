@@ -27,6 +27,13 @@
       align-items: center;
 
       cursor: no-drop;
+
+      &__select {
+        border: none;
+        outline: none;
+
+        text-transform: capitalize;
+      }
     }
   }
 }
