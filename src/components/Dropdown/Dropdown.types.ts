@@ -1,6 +1,6 @@
 interface BaseDropdownProps {
   label: string;
-  onSelect: (option: string[]) => void;
+  onSelect?: (option: string[]) => void;
   multiple?: boolean;
 }
 

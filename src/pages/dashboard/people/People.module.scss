@@ -1,0 +1,9 @@
+.people {
+  display: flex;
+  flex: 1;
+  gap: 10px;
+
+  & > div {
+    flex: 1;
+  }
+}

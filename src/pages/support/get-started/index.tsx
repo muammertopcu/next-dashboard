@@ -1,5 +1,7 @@
+import {UnderConstruction} from "@/components";
+
 const GetStarted = () => {
-  return <></>
+  return <UnderConstruction/>;
 }
 
 export default GetStarted
